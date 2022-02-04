@@ -72,10 +72,20 @@ public class Person
 	{
 		this.age = age;
 	}
-	
-	public static void main(String[] args) {
-		Person r = new Person("Romeo", "Mon",15);
-		System.out.println("R "+r);
+
+	public static void main(String[] args)
+	{
+		Person r = new Person("Romeo", "Mon", 15);
+		System.out.println("R " + r);
+	}
+
+	public Person makePerson(Person that) throws UnderAgeException
+	{
+		if(age<18 || that.age<18) {
+			throw new UnderAgeException();
+		}
+		Person child = new Person(this.fname, that.lname, 0);
+		return child;
 	}
 
 }
