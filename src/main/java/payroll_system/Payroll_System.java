@@ -36,14 +36,17 @@ public class Payroll_System
 		}
 		return pays;
 	}
-	
-	public void change_hour(String name,int hour) throws PersonNonExistException{
+
+	public void change_hour(String name, int hour) throws PersonNonExistException
+	{
 		int i = findEmployee(name);
-		if (i==-1) throw new PersonNonExistException();
-		else {
-			employees.get(i).setHours(hour);
+		if (i == -1)
+			throw new PersonNonExistException();
+		else
+		{
+				employees.get(i).setHours(hour);
 		}
-		
+
 	}
 
 	private int findEmployee(String name)

@@ -11,13 +11,13 @@ public class Hourly extends Employee
 	@Override
 	public float pay()
 	{
-		if (this.rate <= 40)
+		if (hours <= 40)
 		{
 			return super.pay();
 		} else
 		{
-			float pay_more = (float) ((this.hours - 40) * (1.5 * this.rate));
-			return super.pay() + pay_more;
+			float pay_more = (float) ((hours - 40) * (1.5 * rate));
+			return rate * 40 + pay_more;
 		}
 
 	}

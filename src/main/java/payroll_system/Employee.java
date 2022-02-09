@@ -2,15 +2,23 @@ package payroll_system;
 
 public class Employee
 {
-    String name;
+	String name;
 	float rate;
 	int hours;
 
 	public Employee(String name, float rate, int hours)
 	{
+
 		this.name = name;
 		this.rate = rate;
 		this.hours = hours;
+
+	}
+
+	@Override
+	public String toString()
+	{
+		return "Employee " + name;
 	}
 
 	public float pay()
