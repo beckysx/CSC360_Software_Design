@@ -2,7 +2,7 @@ package payroll_system;
 
 public class Employee
 {
-	String name;
+    String name;
 	float rate;
 	int hours;
 
