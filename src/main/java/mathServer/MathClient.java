@@ -13,12 +13,11 @@ public class MathClient
 		// TODO Auto-generated method stub
 		try
 		{
-			MathServerInterface ms = (MathServerInterface) 
-					Naming.lookup("rmi://127.0.0.1/MATHS");
-			
+			MathServerInterface ms = (MathServerInterface) Naming.lookup("rmi://127.0.0.1/MATHS");
+
 			int answer = ms.addNumbers(5, 6);
 			System.out.println("Answer is " + answer);
-			
+
 		} catch (MalformedURLException e)
 		{
 			// TODO Auto-generated catch block

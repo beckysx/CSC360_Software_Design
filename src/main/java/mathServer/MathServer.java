@@ -1,14 +1,13 @@
 package mathServer;
+
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-
 public class MathServer extends UnicastRemoteObject implements MathServerInterface
 {
-	
-	
+
 	/**
 	 * 
 	 */
@@ -26,9 +25,10 @@ public class MathServer extends UnicastRemoteObject implements MathServerInterfa
 		System.out.println("Answering Question...");
 		return a + b;
 	}
-	
-	public static void main(String[] args) {
-		
+
+	public static void main(String[] args)
+	{
+
 		try
 		{
 			MathServer m = new MathServer();
@@ -42,7 +42,7 @@ public class MathServer extends UnicastRemoteObject implements MathServerInterfa
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }
